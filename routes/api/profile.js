@@ -4,6 +4,8 @@ const router = express.Router();
 const auth = require('../../middleware/auth');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
+const Post = require('../../models/Post');
+
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const bcrypt = require('bcryptjs');
@@ -89,22 +91,20 @@ router.post(
     if (instagram) profileFields.social.instagram = instagram;
 
     try {
-      let profile = await Profile.findOne({ user: req.user.id });
+      // let profile = await Profile.findOne({ user: req.user.id });
 
-      if (profile) {
-        profile = await Profile.findOneAndUpdate(
-          { user: req.user.id },
-          { $set: profileFields },
-          { new: true }
-        );
+      // if (profile) {
+      profile = await Profile.findOneAndUpdate(
+        { user: req.user.id },
+        { $set: profileFields },
+        { new: true, upsert: true }
+      );
 
-        return res.json(profile);
-      }
-
-      profile = new Profile(profileFields);
-      await profile.save();
       res.json(profile);
     } catch (err) {
+      // profile = new Profile(profileFields);
+      // await profile.save();
+      // res.json(profile);
       console.error(err.message);
       res.status(500).send('Server Error');
     }
@@ -147,13 +147,15 @@ router.get('/user/:user_id', async (req, res) => {
   }
 });
 
-// @route DELEte api/profile
+// @route DELETE api/profile
 // @desc  Delete profile,user and posts
 // @access  Private
 
 router.delete('/', auth, async (req, res) => {
   try {
-    //@todo-remove users posts
+    //remove user posts
+    await Post.deleteMany({ user: req.user.id });
+
     //Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
 
