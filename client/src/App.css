@@ -164,7 +164,7 @@
 }
 .alert {
   padding: 0.8rem;
-  margin: 1rem;
+  margin: 1rem 0px;
   opacity: 0.8;
   background-color: #f4f4f4;
   color: #333;
@@ -233,10 +233,10 @@
   margin-top: 0.3rem;
   color: #aaa;
 }
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="date"],
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
 .form select,
 .form textarea {
   display: block;
@@ -245,7 +245,7 @@
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
-.form input[type="submit"] {
+.form input[type='submit'] {
   font: inherit;
 }
 .form .social-input {
@@ -279,7 +279,7 @@
   padding: 0px;
 }
 body {
-  font-family: "Raleway", sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
   font-size: 1rem;
   line-height: 1.6;
   background-color: white;
@@ -328,7 +328,7 @@ img {
 }
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat center center;
+  background: url('./img/showcase.jpg') no-repeat center center;
   background-size: cover;
   height: 100vh;
 }
@@ -369,10 +369,10 @@ img {
   display: -ms-grid;
   display: grid;
   grid-template-areas:
-    "top top"
-    "about about"
-    "exp edu"
-    "github github";
+    'top top'
+    'about about'
+    'exp edu'
+    'github github';
   grid-gap: 1rem;
 }
 .profile-grid .profile-top {
@@ -536,11 +536,11 @@ img {
   }
   .profile-grid {
     grid-template-areas:
-      "top"
-      "about"
-      "exp"
-      "edu"
-      "github";
+      'top'
+      'about'
+      'exp'
+      'edu'
+      'github';
   }
   .profile-about .skills {
     -webkit-box-orient: vertical;
