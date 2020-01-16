@@ -14,7 +14,7 @@ const CommentItem = ({
   console.log(name);
 
   return (
-    <div class='post bg-white p-1 my-1'>
+    <div class='post bg-light p-1 my-1'>
       <div>
         <Link to={`/profile/${user}`}>
           <img class='round-img' src={avatar} alt='' />

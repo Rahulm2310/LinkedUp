@@ -8,10 +8,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Developers</Link>
+        <Link to='/profiles'>
+          <i class='fas fa-users'></i> Developers
+        </Link>
       </li>
       <li>
-        <Link to='/posts'>Posts</Link>
+        <Link to='/posts'>
+          <i class='fa fa-tasks' aria-hidden='true'></i> Posts
+        </Link>
       </li>
       <li>
         <Link to='/dashboard'>
@@ -31,13 +35,19 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Developers</Link>
+        <Link to='/profiles'>
+          <i className='fas fa-users'></i> Developers
+        </Link>
       </li>
       <li>
-        <Link to='/register'>Register</Link>
+        <Link to='/register'>
+          <i className='fa fa-user-plus' aria-hidden='true'></i> Register
+        </Link>
       </li>
       <li>
-        <Link to='/login'>Login</Link>
+        <Link to='/login'>
+          <i class='fa fa-key' aria-hidden='true'></i> Login
+        </Link>
       </li>
     </ul>
   );
@@ -46,7 +56,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='fas fa-code'></i> DevConnector
+          <i className='fas fa-magnet'></i> LinkedUp
         </Link>
       </h1>
       {!loading && (

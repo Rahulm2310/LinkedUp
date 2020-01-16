@@ -55,7 +55,12 @@ const CreateProfile = ({ createProfile, history }) => {
       <small>* = required field</small>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
-          <select name='status' value={status} onChange={e => onChange(e)}>
+          <select
+            className='select-status'
+            name='status'
+            value={status}
+            onChange={e => onChange(e)}
+          >
             <option value='0'>* Select Professional Status</option>
             <option value='Developer'>Developer</option>
             <option value='Junior Developer'>Junior Developer</option>
@@ -149,7 +154,7 @@ const CreateProfile = ({ createProfile, history }) => {
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <small className='form-text'>Optional</small>
         </div>
 
         {displaySocialInputs && (
