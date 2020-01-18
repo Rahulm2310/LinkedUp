@@ -33,7 +33,7 @@ const Education = ({ education, deleteEducation }) => {
       <table className='table'>
         <thead>
           <tr>
-            <th>School</th>
+            <th>Instituition</th>
             <th className='hide-sm'>Degree</th>
             <th>Years</th>
             <th style={{ background: 'transparent' }} />

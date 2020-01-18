@@ -1,10 +1,10 @@
 /* Global Styles */
 :root {
-  --primary-color:/* #9268ad*/ #4e1c6e;
-  --dark-color: /*#343a40*/ #4e1c6e;
+  --primary-color: #4e1c6e;
+  --dark-color: #4e1c6e;
   --light-color: #f4f4f4;
-  --danger-color: #f74052;
-  --success-color: #3dd661;
+  --danger-color: #f02f42;
+  --success-color: #38dd5f;
 }
 
 * {
@@ -19,15 +19,11 @@ html {
 
 body {
   font-family: 'Contrail One', cursive;
-
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
-  /* background: linear-gradient(to left, #a8a6a6, #addbd9); */
-  /* background: linear-gradient(to left, #50c9c3, #96deda); */
-  /* background: linear-gradient(to right, #fc354c, #0abfbc);*/
-  background: linear-gradient(to right, #7b5296, #63b8b5);
+  background: linear-gradient(to right, #a26dc5, #6dc9c6);
 }
 
 a {
@@ -422,7 +418,7 @@ textarea,
 }
 
 .profile-top .icons a:hover {
-  color: var(--dark-color);
+  color: #c28ee2;
 }
 
 .profile-about {
