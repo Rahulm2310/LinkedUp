@@ -10,5 +10,8 @@
 5. MongoDB Atlas (Database)
 6. Express (framework)
 
-##License
+## Author
+[Rahul Mohata](https://github.com/Rahulm2310)
+
+## License
 This project is licensed under the MIT License
